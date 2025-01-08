@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@300;400;500;700;900&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    --button: #8CB560;
+    --yellow: #FEBD00;
+    --green: #62ae2f;
+    --pharmacy-name-color: #2D79B7; /* Blue color for pharmacy name */
+}
+
+
+
+
+
+
+
+/**Navigation**/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html{
+
+    font-size: 62.5%;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: black;
+    padding: 1rem;
+    margin-left: 5px;
+    position: relative;
+}
+.navbar a::after{
+    content: "";
+    background-color: #62ae2f;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 100%;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+
+
+.logo h1{
+    color: var(--pharmacy-name-color);
+    margin-right: 5px;
+    font-size: 25px;
+}
+.logo i{
+    margin-right: 10px;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icons div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icons #menu-bar {
+    color: var(--pharmacy-name-color);
+    font-size: 2rem;
+    display: none;
+}
+
+.icons #cart {
+    font-size: 3rem;
+}
+
+.icons #cart a {
+    color: var(--pharmacy-name-color);
+}
+
+.icons #cart a:hover {
+    color: var(--pharmacy-name-color);
+}
+
+.icons #login {
+    font-size: 3rem;
+
+}
+.icons #login a{
+    color: var(--pharmacy-name-color);
+}
+
+.icons:hover {
+    cursor: pointer;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.add-cart{
+    position: absolute;
+    top: 110%;
+    right: 5%;
+    width: 25rem;
+    background-color: rgb(247, 249, 248);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.add-cart.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+.main-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.main-cart i{
+    font-size: 18px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: #62ae2f;
+}
+.main-cart i:hover{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.main-cart img{
+    width: 100px;
+    padding: 1.5rem 1rem;
+}
+
+.main-cart button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.main-cart button:hover{
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+
+.box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover input{
+    width: 100px;
+}
+
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas{
+    color: rgb(40, 148, 40);
+    font-size: 15px;
+}
+.header .menu-{
+    padding: 28px 20px;
+    position: relative;
+    float: right;
+    cursor: pointer;
+}
+.header .menu-icon .nav-icon{
+    background: rgb(173, 20, 20);
+    display: block;
+    height: 2px;
+    width: 18px;
+    position: relative;
+    transition: all .2s ease-out;
+}
+.header .menu-icon .nav-icon:before{
+    background: rgb(190, 20, 20);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: 5px;
+    transition: all .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:after{
+    background: rgb(226, 29, 29);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    top: -5px;
+    transition: all .2s ease-out;
+}
+
+.header .menu-btn{
+    display: none;
+}
+.header .menu-btn:checked ~ .menu{
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon{
+    background: transparent;
+
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:before{
+    transform: rotate(-45deg);
+    top: 0;
+    
+}
+
+.header .menu-btn:checked ~ .menu-icon .nav-icon:after{
+    transform: rotate(45deg);
+    top: 0;
+    
+}
+@media (min-width:1200px){
+    .header li{
+        float: left;
+
+    }
+    .header ul{
+        background: transparent;
+    }
+    .header li a{
+        padding: 45px 15px;
+        font-size: clamp(10px,1.5vw,200px);
+
+        
+    }
+    .header .menu{
+        clear: none;
+        float: right;
+        max-height: none;
+    
+    }
+    .header .menu-icon{
+        display: none;
+    }
+}
+
+@media (min-width:3000px){
+    .header{
+        height: 400px;
+    }
+    .header .logo img{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0px;
+    margin: 6% auto 0;
+}
+
+.single-card {
+    position: relative;
+    width: 280px;
+    height: 320px;
+    margin: 15px;
+    box-shadow: 0 2px 20px rgba(201, 88, 88, 0.5);
+    transition: box-shadow 0.3s ease;
+    overflow: hidden;
+    background: #414852;
+    border-radius: 15px;
+    transition: all 0.8s ease-in-out;
+    width: calc(25% - 30px);
+}
+
+.single-card:hover {
+    transform: translateY(-10px);
+}
+
+.img-area {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.img-area img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.img-area:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(184, 194, 199, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.single-card:hover .overlay {
+    opacity: 1;
+}
+
+.add-to-cart, .view-details {
+    background-color: #fff;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.add-to-cart:hover, .view-details:hover {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    border: none;
+}
+
+.info {
+    padding: 10px;
+    text-align: center;
+    color: #ddd;
+}
+
+.info h3 {
+    margin: 15px 0 10px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.info .price {
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: aqua;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .icons #menu-bar {
+        display: block;
+    }
+    .single-card {
+        width: calc(50% - 30px); /* 50% of the container width minus the gap */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .single-card {
+        width: calc(100% - 30px); /* 100% of the container width minus the gap */
+    }
+}
+
+
+
+@media (max-height: 800px) {
+    footer {
+        position: static;
+    }
+    header {
+        padding-top: 40px;
+    }
+}
+
+
+.footer-distributed {
+    background-color: #e3f8f1; /* Light green for a clean, calming background */
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 50px 50px 60px 50px;
+    margin-top: 80px;
+}
+
+.footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+    width: 30%;
+}
+
+.footer-distributed h3 {
+    color: #2c786c; /* Darker green for the heading */
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span {
+    color: #37a69b; /* Vibrant green for emphasis */
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+    color: #2c786c;
+    margin: 20px 0 12px;
+}
+
+.footer-distributed .footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+    color: #6e8483; /* Subtle gray-green for the company name */
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+.footer-distributed .footer-center {
+    width: 35%;
+}
+
+.footer-distributed .footer-center i {
+    background-color: #37a69b; /* Vibrant green for icons */
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+    display: inline-block;
+    color: #2c786c;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+    color: #1b6d63;
+    text-decoration: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+    width: 30%;
+}
+
+.footer-distributed .footer-company-about {
+    line-height: 20px;
+    color: #5a7a78;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+    display: block;
+    color: #2c786c;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color: #37a69b; /* Vibrant green for icon background */
+    border-radius: 2px;
+    font-size: 20px;
+    color: #ffffff; /* White for icons */
+    text-align: center;
+    line-height: 35px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons a:hover {
+    background-color: #2c786c; /* Darker green on hover */
+}
+
+.footer-links a:hover {
+    color: #1b6d63; /* Muted dark green on hover */
+}
+
+@media (max-width: 880px) {
+    .footer-distributed .footer-left, .footer-distributed .footer-center, .footer-distributed .footer-right {
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .footer-distributed .footer-center i {
+        margin-left: 0;
+    }
+}
+
+/* Style for the menu bar icon */
+#menu-bar {
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    padding: 10px;
+  }
+  
+  /* Hidden menu by default */
+  #menu.hidden {
+    display: none;
+  }
+  
+  /* Menu styling when visible */
+  #menu {
+    position: absolute;
+    top: 50px; /* Adjust according to your layout */
+    right: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #menu a:last-child {
+    border-bottom: none;
+  }
+  
+  #menu a:hover {
+    background-color: #f0f0f0;
+  }
+  

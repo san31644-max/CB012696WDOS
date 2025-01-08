@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner&family=Roboto:wght@300;400;500;700;900&family=Square+Peg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto:wght@300;400;500;700;900&display=swap');
+:root {
+    --button: #8CB560;
+    --yellow: #FEBD00;
+    --green: #62ae2f;
+    --pharmacy-name-color: #2D79B7; /* Blue color for pharmacy name */
+}
+
+
+
+
+
+
+
+/**Navigation**/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html{
+
+    font-size: 62.5%;
+    
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 7%;
+    background-color: white;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    position: fixed;
+    left: 0;
+    right: 0;
+
+}
+.navbar a{
+    font-size: 18px;
+    color: black;
+    padding: 1rem;
+    margin-left: 5px;
+    position: relative;
+}
+.navbar a::after{
+    content: "";
+    background-color: #62ae2f;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 3px;
+    top: 100%;
+    transition: 0.5s;
+}
+.navbar a:hover::after{
+    width: 100%;
+}
+
+
+.logo h1{
+    color: var(--pharmacy-name-color);
+    margin-right: 5px;
+    font-size: 25px;
+}
+.logo i{
+    margin-right: 10px;
+}
+
+
+.icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icons div {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icons #menu-bar {
+    color: var(--pharmacy-name-color);
+    font-size: 2rem;
+    display: none;
+}
+
+.icons #cart {
+    font-size: 3rem;
+}
+
+.icons #cart a {
+    color: var(--pharmacy-name-color);
+}
+
+.icons #cart a:hover {
+    color: var(--pharmacy-name-color);
+}
+
+.icons #login {
+    font-size: 3rem;
+
+}
+.icons #login a{
+    color: var(--pharmacy-name-color);
+}
+
+.icons:hover {
+    cursor: pointer;
+}
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.submenu a:hover {
+    background-color: #f0f0f0;
+}
+
+.add-cart{
+    position: absolute;
+    top: 110%;
+    right: 5%;
+    width: 25rem;
+    background-color: rgb(247, 249, 248);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+.add-cart.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+.main-cart{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.main-cart i{
+    font-size: 18px;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    color: #62ae2f;
+}
+.main-cart i:hover{
+    cursor: pointer;
+    color: var(--yellow);
+}
+
+.main-cart img{
+    width: 100px;
+    padding: 1.5rem 1rem;
+}
+
+.main-cart button{
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background-color: var(--green);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    transition: 0.5s;
+}
+.main-cart button:hover{
+    border-radius: 0;
+    cursor: pointer;
+}
+
+
+
+.box{
+    height: 30px;
+    display: flex;
+    cursor: pointer;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 30px;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover input{
+    width: 100px;
+}
+
+.box input{
+    width: 0;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    transition: 0.8s;
+    background: transparent;
+}
+
+.box a .fas{
+    color: rgb(40, 148, 40);
+    font-size: 15px;
+}
+
+.cart-container {
+    margin: 20px auto; /* Centered cart container */
+    max-width: 900px; /* Maximum width for larger screens */
+    background-color: white; /* White background for contrast */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: #8BC34A; /* Light green header for the table */
+    color: white;
+    padding: 15px;
+}
+
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s; /* Smooth transition for hover */
+}
+
+td:hover {
+    background-color: #dcedc8; /* Light green on hover */
+}
+
+.total {
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px; /* Increased font size for emphasis */
+    margin-top: 20px;
+    color: #4CAF50; /* Green color for total */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #4CAF50; /* Green footer */
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: 5px solid #388E3C; /* Darker green border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px;
+    }
+
+    .cart-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    table {
+        font-size: 14px; /* Smaller font size for tablets */
+    }
+
+    th, td {
+        padding: 10px; /* Reduced padding */
+    }
+
+    .total {
+        font-size: 18px; /* Adjusted total font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        font-size: 18px; /* Smaller header font */
+    }
+
+    .cart-container {
+        padding: 10px; /* Less padding for mobile devices */
+    }
+
+    table {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+
+    th, td {
+        padding: 8px; /* Reduced padding */
+    }
+
+    .total {
+        font-size: 16px; /* Smaller total font size for mobile */
+    }
+}
+
+.place-order {
+    margin-top: 20px;
+    text-align: center; /* Center the button */
+}
+
+#place-order-btn {
+    background-color: #28a745; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#place-order-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+.button {
+    display: inline-block; /* Make the link behave like a button */
+    background-color: #28a745; /* Green background */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    text-align: center; /* Center the text */
+    transition: background-color 0.3s; /* Transition effect for hover */
+}
+
+.button:hover {
+    background-color: #218838; /* Darker green on hover */
+}

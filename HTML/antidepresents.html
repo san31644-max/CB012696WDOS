@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- divinectorweb.com -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTIDEPRESSENTS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="../CSs/antihistamines.css">
+</head>
+ 
+<!--Header Contents Goes Here-->
+<header class="header">
+
+    <div class="logo">
+        <h1>CureCORNER</span></h1>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+
+<!--sub menu-->
+        <div class="menu">
+            <a href="#">Products <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+
+            <div class="submenu">
+                <a href="./antidepresents.html"><i class="fa fa-hand-o-right" aria-hidden="true"></i> Antidepressant</a>
+
+                <a href="../HTML/antibiotics.html">Antibiotics</a>
+                <a href="../HTML/analgesics.html">Analgesics</a>
+                <a href="../HTML/antihypertensives.html">Antihypertensives</a>
+                <a href="../HTML/antihistamines.html">Antihistamines</a>
+                
+            </div>
+        </div>
+       
+        
+        <a href="./contactus.html">Contact Us</a>
+        
+    </nav>
+    
+
+    <div class="icons">
+        <div id="menu-bar" class="fas fa-bars"></div>
+       
+
+<!-- The Menu -->
+<nav id="menu" class="hidden">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</nav>
+
+        <div id="cart">
+            <a href="../HTML/cart.html">
+            <i class="fas fa-cart-plus"></i>
+        </a></div>
+        <div id="login">
+        <a href="login.html">
+            <i class="fas fa-user"></i>
+        </a></div>
+
+       
+    <div class="box">
+        <input type="text" placeholder="Search">
+        <a href="#">
+            <i class="fas fa-search"></i>
+        </a>
+    </div>
+    
+
+
+
+
+</header>
+
+<body>
+  <br><br><br>
+
+    
+    
+  <div class="wrapper">
+<!-- Product Card 1: Amitriptyline -->
+<div class="single-card" data-product-id="5" data-product-name="Amitriptyline" data-product-price="200">
+    <div class="img-area">
+        <img src="../Antidepressant/amitriptyline.webp" alt="Amitriptyline">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(5, 'Amitriptyline', 200, '../Antidepressant/amitriptyline.webp')">Add to Cart</button>
+            <button class="add-to-favourites-btn" onclick="addToFavourite(5, 'Amitriptyline', 200, '../Antidepressant/amitriptyline.webp')">Add to Favourites</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Amitriptyline</h3>
+        <p class="price">Rs.200/-</p>
+    </div>
+</div>
+
+
+<!-- Product Card 2: Bupropion -->
+<div class="single-card" data-product-id="17" data-product-name="Bupropion" data-product-price="300">
+    <div class="img-area">
+        <img src="../Antidepressant/bupropion.jpeg" alt="Bupropion">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(17, 'Bupropion', 300, '../Antidepressant/bupropion.jpeg')">Add to Cart</button>
+            <button class="add-to-favorite" onclick="addToFavorite(17, 'Bupropion', 300, '../Antidepressant/bupropion.jpeg')">Add to Favourite</button>
+            <button class="view-details" onclick="viewProductDetails(17, 'Bupropion', 300, '../Antidepressant/bupropion.jpeg')">View Details</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Bupropion</h3>
+        <p class="price">Rs.300/-</p>
+    </div>
+</div>
+
+<!-- Product Card 3: Citalopram -->
+<div class="single-card" data-product-id="3" data-product-name="Citalopram" data-product-price="500">
+    <div class="img-area">
+        <img src="../Antidepressant/citalopram.jpg" alt="Citalopram">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(3, 'Citalopram', 500, '../Antidepressant/citalopram.jpg')">Add to Cart</button>
+            <button class="view-details" onclick="viewProductDetails(3, 'Citalopram', 500, '../Antidepressant/citalopram.jpg')">View Details</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Citalopram</h3>
+        <p class="price">Rs.500/-</p>
+    </div>
+</div>
+
+<!-- Product Card 4: Cymbalta -->
+<div class="single-card" data-product-id="4" data-product-name="Cymbalta" data-product-price="1000">
+    <div class="img-area">
+        <img src="../Antidepressant/Cymbalta.jpg" alt="Cymbalta">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(4, 'Cymbalta', 1000, '../Antidepressant/Cymbalta.jpg')">Add to Cart</button>
+            <button class="view-details" onclick="viewProductDetails(4, 'Cymbalta', 1000, '../Antidepressant/Cymbalta.jpg')">View Details</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Cymbalta</h3>
+        <p class="price">Rs.1000/-</p>
+    </div>
+</div>
+
+<!-- Product Card 5: Fluoxetin -->
+<div class="single-card" data-product-id="6" data-product-name="Fluoxetin" data-product-price="300">
+    <div class="img-area">
+        <img src="../Antidepressant/prozac-fluoxetin.jpg" alt="Fluoxetin">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(6, 'Fluoxetin', 300, '../Antidepressant/prozac-fluoxetin.jpg')">Add to Cart</button>
+            <button class="add-to-favorite" onclick="addToFavorite(6, 'Fluoxetin', 300, '../Antidepressant/prozac-fluoxetin.jpg')">Add to Favourite</button>
+            <button class="view-details" onclick="viewProductDetails(6, 'Fluoxetin', 300, '../Antidepressant/prozac-fluoxetin.jpg')">View Details</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Fluoxetin</h3>
+        <p class="price">Rs.300/-</p>
+    </div>
+</div>
+
+<!-- Product Card 6: Zoloft -->
+<div class="single-card" data-product-id="7" data-product-name="Zoloft" data-product-price="350">
+    <div class="img-area">
+        <img src="../Antidepressant/zoloft.jpg" alt="Zoloft">
+        <div class="overlay">
+            <button class="add-to-cart" onclick="addToCart(7, 'Zoloft', 350, '../Antidepressant/zoloft.jpg')">Add to Cart</button>
+            <button class="add-to-favorite" onclick="addToFavorite(7, 'Zoloft', 350, '../Antidepressant/zoloft.jpg')">Add to Favourite</button>
+            <button class="view-details" onclick="viewProductDetails(7, 'Zoloft', 350, '../Antidepressant/zoloft.jpg')">View Details</button>
+        </div>
+    </div>
+    <div class="info">
+        <h3>Zoloft</h3>
+        <p class="price">Rs.350/-</p>
+    </div>
+</div>
+
+
+
+<footer class="footer-distributed">
+
+    <div class="footer-left">
+        <h3>CURE &nbsp;<span>CONER</span></h3>
+
+        <p class="footer-links">
+            <a href="../HTML/index.html">Home</a>
+            
+            <a href="../HTML/aboutus.html">About</a>
+            
+            <a href="contact us.html">Contact</a>
+            
+            <a href="login.html">Login</a>
+
+
+
+        </p>
+
+        <p class="footer-company-name">Copyright © 2021 <strong>CURECORNER</strong> All rights reserved</p>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>COLONBO
+
+            </span>
+                location</p>
+        </div>
+
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+94-4454654654</p>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:sagar00001.co@gmail.com">123@GMAIL.com</a></p>
+        </div>
+    </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>About the company</span>
+            <strong>Pharmacy..MAK YOUR FREIND FOR LIVING HEALTHY</strong> 
+   
+        </p>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/lil_sandu21?igsh=OTNjY2s5aGFnenNw"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/lil_sandu21?igsh=OTNjY2s5aGFnenNw"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/lil_sandu21?igsh=OTNjY2s5aGFnenNw"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/lil_sandu21?igsh=OTNjY2s5aGFnenNw"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/lil_sandu21?igsh=OTNjY2s5aGFnenNw"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="../JS/main.js"></script>
+<script src="../JS/addd2fav.js"></script>
+</body>
+</html>
